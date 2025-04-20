@@ -1,23 +1,24 @@
-var messageArea= document.getElementById("text")
-var button = document.getElementById("btn")
-var messageDiv = document.getElementById("Messagebox");
+let input = document.getElementById("inp");
 
+let text = document.querySelector(".Messagebox");
 
-var valid= "Helloworld"
-
-function success (){
-    var message= document.getElementById("text")
-    var entertext = messageArea.value;
-
-    if( valid && entertext){
-        messageDiv.textContent =alert ("【﻿ｗｅｌｌｃｏｍｅ】");
-        messageDiv.style.color="white"
-        messageDiv.style.fontSize="20px"
-        
-    }else{
-messageDiv.textContent=alert("Invalid")
+function Add() {
+  if (input.value == "") {
+    alert("Please Enter the task");
+  } else {
+    let element = document.createElement("ul"); //element create karenge
+    element.innerHTML = `${input.value} <span class="fa-solid">Delete</span>`;
+    text.appendChild(element); //child ko append karenge khali div me
+    input.value = ""; //Empty
+    element.querySelector("i").addEventListener("click", remove);
+    function remove() {
+      element.remove();
     }
-    
+  }
 }
 
-button.addEventListener("click",success)
+
+
+
+
+

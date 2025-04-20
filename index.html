@@ -5,37 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO APP</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e5a5c1bf22.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <div class="todo-list">
-        <h1>Todo List</h1>
-        <form action="">
-            <input id="text" type="text" placeholder="Add new todo......"><br>
-            <span class="Addbtn">
-                <input id="btn" type="submit" value="Add">
-            </span>
-        </form>
-        <div id="Messagebox"></div>
-        <ul>
+    <div class="main">
+        <h1>To-Do List</h1>
+<div class="input-btn">
+    <input id="inp" type="text">
+<button onclick="Add()">Add</button>
 
-            <li>
-                <span>Todo1</span>
-                <button>Edit</button>
-                <button>Delete</button>
-            </li>
-            
-            <li>
-                <span>Todo2</span>
-                <button>Edit</button>
-                <button>Delete</button>
-            </li>
-            <li>
-                <span>Todo3</span>
-                <button>Edit</button>
-                <button>Delete</button>
-            </li>
-        </ul>
+</div>
+<div class="container-message-box">
+<span class="Messagebox"></span>
+</div>
+
     </div>
+  
 </body>
 <script src="index.js"></script>
 </html>
